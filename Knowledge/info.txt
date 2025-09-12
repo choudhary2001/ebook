@@ -1,0 +1,364 @@
+# eBookStore - Master Information File
+# This is the central documentation file containing all critical project information
+
+## PROJECT OVERVIEW
+eBookStore is a fully responsive eCommerce website frontend for digital books built with HTML5, TailwindCSS, and Vanilla JavaScript. The platform is designed for scalability to handle 1M+ users with optimal performance and security.
+
+## CRITICAL INFORMATION
+
+### Architecture
+- Frontend-only static website (no backend required initially)
+- Single Page Application (SPA) behavior with hash-based routing
+- Progressive Web App (PWA) ready architecture
+- Mobile-first responsive design approach
+
+### Technology Stack
+- HTML5 (semantic markup)
+- TailwindCSS (utility-first CSS framework)
+- Vanilla JavaScript ES6+ (no external dependencies)
+- SVG graphics for scalable icons and placeholders
+
+## PORTS AND SERVICES
+
+### Development Ports (Fixed and Reused)
+- HTTP Server: Port 8080 (for local development)
+- Live Reload: Port 3000 (if using development server)
+- No backend ports required (frontend-only)
+
+### Services List
+1. **Static File Server**
+   - Purpose: Serve HTML, CSS, JS, and asset files
+   - Endpoint: http://localhost:8080
+   - Execution: `python3 -m http.server 8080` or any static file server
+   - Dependencies: None
+
+2. **eBook Data Service**
+   - Purpose: Provide eBook metadata via JSON file
+   - Endpoint: data/ebooks.json
+   - Execution: Static file serving
+   - Dependencies: None
+
+## HOW TO RUN EACH SERVICE
+
+### Static Website
+```bash
+# Method 1: Python HTTP Server
+cd /Users/divakarchoudhary/Documents/ecommerce
+python3 -m http.server 8080
+
+# Method 2: Node.js HTTP Server (if Node.js installed)
+npx http-server -p 8080
+
+# Method 3: PHP Built-in Server (if PHP installed)
+php -S localhost:8080
+```
+
+### Access URLs
+- Home Page: http://localhost:8080/index.html
+- eBook Details: http://localhost:8080/ebook-details.html?id=1
+- Categories: http://localhost:8080/categories.html
+- About: http://localhost:8080/about.html
+- Contact: http://localhost:8080/contact.html
+- 404 Page: http://localhost:8080/404.html
+- Privacy Policy: http://localhost:8080/privacy.html
+
+## HOW EACH SERVICE WORKS
+
+### Frontend Application Flow
+1. **Initialization**: Main.js loads and initializes the EBookStore class
+2. **Data Loading**: Fetches eBook data from data/ebooks.json
+3. **Theme Management**: Handles light/dark mode switching with localStorage persistence
+4. **Search & Filtering**: Real-time search and category filtering of eBooks
+5. **Routing**: Hash-based navigation between pages
+6. **Download**: Simulated eBook download functionality
+
+### Key JavaScript Components
+- **EBookStore Class**: Main application controller
+- **Theme Manager**: Light/dark mode switching
+- **Search Engine**: Real-time book filtering
+- **Mobile Menu**: Responsive navigation
+- **Form Handlers**: Contact form and newsletter subscription
+- **Performance Optimizations**: Lazy loading, debouncing, intersection observers
+
+## COMPLETE DATA SCHEMA
+
+### eBooks Data Structure (data/ebooks.json)
+```json
+{
+  "id": number,           // Unique identifier
+  "title": string,        // eBook title
+  "author": string,       // Author name
+  "price": string,        // Price with currency symbol
+  "category": string,     // Category (Technology, Business, Arts, etc.)
+  "description": string,  // Short description
+  "fullDescription": string, // Detailed description for details page
+  "cover": string,        // Path to cover image
+  "downloadUrl": string,  // Path to PDF file
+  "rating": number,       // Rating out of 5
+  "pages": number,        // Number of pages
+  "publishedYear": number, // Publication year
+  "isbn": string          // ISBN number
+}
+```
+
+### Categories
+- Technology (4 books)
+- Business (2 books)
+- Arts (2 books)
+- Health (1 book)
+- Finance (1 book)
+- Self-Help (1 book)
+- Lifestyle (1 book)
+
+## MASTER METHODS AND CORE LOGIC
+
+### Critical JavaScript Methods
+
+#### 1. Application Initialization
+```javascript
+async init() {
+  - Initialize theme from localStorage
+  - Bind all event listeners
+  - Load eBook data from JSON
+  - Handle page-specific logic
+  - Setup performance optimizations
+}
+```
+
+#### 2. Search and Filtering
+```javascript
+performSearch(query) {
+  - Debounced search implementation (300ms delay)
+  - Multi-field search (title, author, category, description)
+  - Case-insensitive matching
+  - Real-time results rendering
+}
+
+filterByCategory(category) {
+  - Filter books by selected category
+  - Update UI with filtered results
+  - Handle "all" category for showing all books
+}
+```
+
+#### 3. Theme Management
+```javascript
+toggleTheme() {
+  - Switch between light/dark modes
+  - Update HTML class and localStorage
+  - Animate transition effects
+  - Persist user preference
+}
+```
+
+#### 4. Book Rendering
+```javascript
+renderBooks() {
+  - Create book cards dynamically
+  - Use DocumentFragment for performance
+  - Handle empty states
+  - Implement lazy loading for images
+}
+```
+
+#### 5. Download Functionality
+```javascript
+downloadBook(book) {
+  - Create temporary download link
+  - Trigger file download
+  - Show loading and success states
+  - Handle download errors gracefully
+}
+```
+
+### Performance Optimizations
+
+#### 1. Lazy Loading
+- Images load only when entering viewport
+- Intersection Observer API for efficient monitoring
+- Placeholder SVG until real images load
+
+#### 2. Debouncing
+- Search input debounced to 300ms
+- Prevents excessive API calls or filtering operations
+
+#### 3. Event Delegation
+- Single event listeners for dynamic content
+- Efficient memory usage for large lists
+
+#### 4. CSS Optimizations
+- Utility-first approach with Tailwind
+- Minimal custom CSS
+- Hardware-accelerated transitions
+
+## ARCHITECTURAL MAP
+
+```
+ecommerce/
+├── index.html              # Home page with featured books
+├── ebook-details.html      # Individual book details
+├── about.html              # Company information
+├── contact.html            # Contact form and FAQ
+├── categories.html         # Browse by category
+├── 404.html               # Error page
+├── privacy.html           # Privacy policy
+├── css/
+│   └── styles.css         # Custom Tailwind styles
+├── js/
+│   └── main.js           # Main application logic
+├── data/
+│   └── ebooks.json       # eBook metadata
+├── assets/
+│   ├── images/
+│   │   └── placeholder.svg # Book cover placeholder
+│   └── ebooks/           # PDF files for download
+│       ├── ebook-1.pdf   # Sample PDF files
+│       └── ...
+├── config/
+│   └── tailwind.config.js # Tailwind configuration
+└── Knowledge/            # Documentation files
+    ├── info.txt         # This master file
+    └── ...
+```
+
+## ASSUMPTIONS AND DESIGN DECISIONS
+
+### Performance Assumptions
+- Target: 1M+ concurrent users
+- Average page load time: <2 seconds
+- Mobile-first approach for 60%+ mobile traffic
+- Progressive enhancement for older browsers
+
+### Security Assumptions
+- Frontend-only application (no sensitive data exposure)
+- Content Security Policy ready
+- XSS protection through proper escaping
+- HTTPS deployment recommended
+
+### Scalability Assumptions
+- Static files can be served via CDN
+- No server-side processing required
+- Database integration can be added later
+- API-ready architecture for backend integration
+
+## SCALING PLANS (1M+ Users Target)
+
+### Phase 1: CDN Implementation
+- Serve static assets via global CDN
+- Implement caching strategies
+- Optimize image delivery
+
+### Phase 2: Backend Integration
+- Add user authentication
+- Implement payment processing
+- Add user accounts and purchase history
+
+### Phase 3: Advanced Features
+- Recommendation engine
+- User reviews and ratings
+- Advanced search with filters
+- Mobile app development
+
+### Phase 4: Enterprise Features
+- Admin dashboard
+- Analytics and reporting
+- A/B testing framework
+- Multi-language support
+
+## PERFORMANCE BENCHMARKS
+
+### Target Metrics
+- First Contentful Paint (FCP): <1.5s
+- Largest Contentful Paint (LCP): <2.5s
+- First Input Delay (FID): <100ms
+- Cumulative Layout Shift (CLS): <0.1
+- Time to Interactive (TTI): <3.5s
+
+### Optimization Strategies
+- Image optimization and lazy loading
+- Code splitting and minification
+- Service worker implementation
+- Critical CSS inlining
+- Preloading of critical resources
+
+## MAINTENANCE AND UPDATES
+
+### Regular Maintenance Tasks
+1. Update eBook data in JSON file
+2. Add new book cover images
+3. Update PDF files in assets/ebooks/
+4. Monitor performance metrics
+5. Update dependencies and security patches
+
+### Update Procedures
+1. Test changes in development environment
+2. Validate all forms and functionality
+3. Check responsive design on all devices
+4. Verify accessibility compliance
+5. Deploy to production with backup
+
+## DEPLOYMENT CHECKLIST
+
+### Pre-Deployment
+- [ ] All images optimized and compressed
+- [ ] CSS and JS minified for production
+- [ ] All links and downloads tested
+- [ ] Cross-browser compatibility verified
+- [ ] Mobile responsiveness confirmed
+- [ ] Performance metrics meet targets
+
+### Production Environment
+- [ ] HTTPS enabled
+- [ ] CDN configured for static assets
+- [ ] Proper caching headers set
+- [ ] Error pages configured (404, 500)
+- [ ] Analytics tracking implemented
+- [ ] SEO meta tags optimized
+
+## TROUBLESHOOTING GUIDE
+
+### Common Issues
+1. **Images not loading**: Check file paths and permissions
+2. **JavaScript errors**: Verify JSON syntax and file paths
+3. **Styles not applied**: Confirm Tailwind CDN link
+4. **Downloads not working**: Check PDF file permissions
+5. **Mobile menu issues**: Verify JavaScript event bindings
+
+### Debug Commands
+```bash
+# Check file structure
+ls -la assets/images/
+ls -la assets/ebooks/
+ls -la data/
+
+# Validate JSON
+python3 -m json.tool data/ebooks.json
+
+# Check server logs
+tail -f /var/log/httpd/access.log
+```
+
+## CONTACT AND SUPPORT
+
+### Development Team
+- Frontend Developer: eBookStore Team
+- Project Manager: eBookStore Team
+- QA Engineer: eBookStore Team
+
+### Support Channels
+- Technical Issues: tech@ebookstore.com
+- Business Inquiries: hello@ebookstore.com
+- Emergency Contact: +1 (555) 123-4567
+
+---
+
+## VERSION HISTORY
+- v1.0.0 (2023-12-15): Initial release with core functionality
+- v1.0.1 (2023-12-16): Performance optimizations and bug fixes
+- v1.1.0 (2023-12-20): Added dark mode and improved mobile experience
+
+## LAST UPDATED
+December 15, 2023
+
+## NOTES
+This file should be updated whenever major changes are made to the architecture, data schema, or critical functionality. All team members should refer to this document for project understanding and maintenance procedures.

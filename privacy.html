@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - eBookStore</title>
+    <meta name="description" content="eBookStore Privacy Policy - Learn how we protect and handle your personal information when you use our digital book platform." />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body class="font-sans antialiased bg-white dark:bg-slate-900 text-slate-900 dark:text-white">
+    <!-- Header -->
+    <header class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-3xl border-b border-white/30 dark:border-slate-700/30 shadow-xl sticky top-0 z-40 transition-all duration-500">
+      <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="index.html" class="flex items-center space-x-3 group">
+              <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  />
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">eBookStore</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Premium Digital Library</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-2">
+            <a href="index.html" class="relative text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition-all duration-300 px-4 py-2 rounded-xl hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30">Home</a>
+            <a href="categories.html" class="relative text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition-all duration-300 px-4 py-2 rounded-xl hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30">Categories</a>
+            <a href="about.html" class="relative text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition-all duration-300 px-4 py-2 rounded-xl hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30">About</a>
+            <a href="contact.html" class="relative text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition-all duration-300 px-4 py-2 rounded-xl hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30">Contact</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="flex items-center space-x-4">
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-3 rounded-2xl bg-white/10 dark:bg-slate-800/50 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 hover:bg-white/20 dark:hover:bg-slate-800/50 transition-all duration-300 hover:scale-110">
+              <svg class="w-6 h-6 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 md:hidden hidden">
+        <div class="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl transform transition-all duration-500 ease-out border-l border-slate-300 translate-x-full">
+          <div class="flex items-center justify-between p-4 border-b border-slate-300 bg-slate-50">
+            <span class="text-lg font-semibold text-slate-800">Menu</span>
+            <button id="mobile-menu-close" class="p-2 rounded-lg hover:bg-slate-200 transition-colors duration-200">
+              <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <nav class="p-4 space-y-2 bg-white">
+            <a href="index.html" class="block py-3 px-4 text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all duration-200 font-medium">Home</a>
+            <a href="categories.html" class="block py-3 px-4 text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all duration-200 font-medium">Categories</a>
+            <a href="about.html" class="block py-3 px-4 text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all duration-200 font-medium">About</a>
+            <a href="contact.html" class="block py-3 px-4 text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all duration-200 font-medium">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-3xl mx-auto fade-in">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">Privacy Policy</h1>
+          <p class="text-xl text-primary-100">Your privacy is important to us. Learn how we protect your information.</p>
+          <p class="text-sm text-primary-200 mt-4">Last updated: December 15, 2023</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Policy Content -->
+    <section class="py-16 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto prose prose-lg dark:prose-invert">
+          <!-- Introduction -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Introduction</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+              eBookStore ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services. Please read this privacy policy carefully. If you do not agree with the
+              terms of this privacy policy, please do not access the site.
+            </p>
+          </div>
+
+          <!-- Information We Collect -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Information We Collect</h2>
+
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Personal Information</h3>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">We may collect personal information that you voluntarily provide to us when you:</p>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 mb-6">
+              <li>Create an account</li>
+              <li>Make a purchase</li>
+              <li>Subscribe to our newsletter</li>
+              <li>Contact us through our contact form</li>
+              <li>Participate in surveys or promotions</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Automatically Collected Information</h3>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">When you visit our website, we may automatically collect certain information about your device and usage patterns, including:</p>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 mb-6">
+              <li>IP address and location data</li>
+              <li>Browser type and version</li>
+              <li>Operating system</li>
+              <li>Pages visited and time spent on pages</li>
+              <li>Referring website addresses</li>
+              <li>Device information and screen resolution</li>
+            </ul>
+          </div>
+
+          <!-- How We Use Your Information -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">How We Use Your Information</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">We use the information we collect for various purposes, including:</p>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+              <li>Providing and maintaining our services</li>
+              <li>Processing transactions and delivering purchased eBooks</li>
+              <li>Sending administrative information and updates</li>
+              <li>Responding to your comments and questions</li>
+              <li>Improving our website and user experience</li>
+              <li>Personalizing content and recommendations</li>
+              <li>Analyzing usage patterns and trends</li>
+              <li>Preventing fraudulent activities</li>
+              <li>Complying with legal obligations</li>
+            </ul>
+          </div>
+
+          <!-- Information Sharing -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Information Sharing and Disclosure</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">We do not sell, trade, or otherwise transfer your personal information to third parties except in the following circumstances:</p>
+
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Service Providers</h3>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">We may share your information with trusted third-party service providers who assist us in operating our website, conducting business, or serving users, provided they agree to keep this information confidential.</p>
+
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Legal Requirements</h3>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">We may disclose your information if required to do so by law or in response to valid requests by public authorities.</p>
+
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Business Transfers</h3>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.</p>
+          </div>
+
+          <!-- Data Security -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Data Security</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:</p>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+              <li>SSL encryption for data transmission</li>
+              <li>Secure server infrastructure</li>
+              <li>Regular security audits and updates</li>
+              <li>Access controls and authentication measures</li>
+              <li>Employee training on data protection</li>
+            </ul>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security.</p>
+          </div>
+
+          <!-- Cookies and Tracking -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Cookies and Tracking Technologies</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">We use cookies and similar tracking technologies to enhance your browsing experience and analyze website traffic. Cookies are small data files stored on your device that help us:</p>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 mb-4">
+              <li>Remember your preferences and settings</li>
+              <li>Provide personalized content</li>
+              <li>Analyze website performance</li>
+              <li>Improve our services</li>
+            </ul>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">You can control cookie settings through your browser preferences. However, disabling cookies may affect the functionality of our website.</p>
+          </div>
+
+          <!-- Your Rights -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Your Privacy Rights</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">Depending on your location, you may have the following rights regarding your personal information:</p>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+              <li><strong>Access:</strong> Request access to your personal information</li>
+              <li><strong>Correction:</strong> Request correction of inaccurate information</li>
+              <li><strong>Deletion:</strong> Request deletion of your personal information</li>
+              <li><strong>Portability:</strong> Request transfer of your data to another service</li>
+              <li><strong>Restriction:</strong> Request restriction of processing</li>
+              <li><strong>Objection:</strong> Object to certain types of processing</li>
+              <li><strong>Withdraw Consent:</strong> Withdraw consent for data processing</li>
+            </ul>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">To exercise these rights, please contact us using the information provided in the "Contact Us" section below.</p>
+          </div>
+
+          <!-- Data Retention -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Data Retention</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+              We retain your personal information only for as long as necessary to fulfill the purposes outlined in this privacy policy, unless a longer retention period is required or permitted by law. When we no longer need your information, we will securely delete or anonymize it.
+            </p>
+          </div>
+
+          <!-- Children's Privacy -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Children's Privacy</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+              Our services are not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information promptly.
+            </p>
+          </div>
+
+          <!-- International Transfers -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">International Data Transfers</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+              Your information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards to protect your information.
+            </p>
+          </div>
+
+          <!-- Updates to Policy -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Updates to This Privacy Policy</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+              We may update this privacy policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by posting the updated policy on our website and updating the "Last updated" date. We encourage you to review this policy periodically.
+            </p>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Contact Us</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">If you have any questions about this privacy policy or our privacy practices, please contact us:</p>
+            <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+              <p class="text-gray-700 dark:text-gray-300 mb-2"><strong>Email:</strong> privacy@ebookstore.com</p>
+              <p class="text-gray-700 dark:text-gray-300 mb-2"><strong>Phone:</strong> +1 (555) 123-4567</p>
+              <p class="text-gray-700 dark:text-gray-300 mb-2"><strong>Address:</strong></p>
+              <p class="text-gray-700 dark:text-gray-300 ml-4">
+                eBookStore Privacy Officer<br />
+                123 Knowledge Street<br />
+                Digital District, DD 12345<br />
+                United States
+              </p>
+            </div>
+          </div>
+
+          <!-- Effective Date -->
+          <div class="border-t border-gray-200 dark:border-gray-700 pt-8">
+            <p class="text-sm text-gray-500 dark:text-gray-400 text-center">This Privacy Policy is effective as of December 15, 2023</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Company Info -->
+          <div class="md:col-span-2">
+            <div class="flex items-center space-x-2 mb-4">
+              <div class="w-8 h-8 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <span class="text-xl font-bold">eBookStore</span>
+            </div>
+            <p class="text-gray-400 mb-4 max-w-md">Your premier destination for high-quality digital books. Discover, learn, and grow with our curated collection of eBooks.</p>
+            <div class="flex space-x-4">
+              <a href="#" class="footer-link">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fill-rule="evenodd"
+                    d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="footer-link">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="footer-link">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="footer-link">Home</a></li>
+              <li><a href="categories.html" class="footer-link">Categories</a></li>
+              <li><a href="about.html" class="footer-link">About Us</a></li>
+              <li><a href="contact.html" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Support</h3>
+            <ul class="space-y-2">
+              <li><a href="help.html" class="footer-link">Help Center</a></li>
+              <li><a href="privacy.html" class="footer-link text-primary-400">Privacy Policy</a></li>
+              <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
+              <li><a href="download-guide.html" class="footer-link">Download Guide</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p class="text-gray-400">&copy; 2023 eBookStore. All rights reserved. Built with passion for knowledge.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform translate-y-16 opacity-0">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+      </svg>
+    </button>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

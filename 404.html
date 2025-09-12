@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found - eBookStore</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Return to eBookStore to explore our collection of premium digital books." />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body class="font-sans antialiased bg-white dark:bg-slate-900 text-slate-900 dark:text-white flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-3xl border-b border-white/30 dark:border-slate-700/30 shadow-xl">
+      <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="index.html" class="flex items-center space-x-3 group">
+              <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  />
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">eBookStore</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Premium Digital Library</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-2">
+            <a href="index.html" class="relative text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition-all duration-300 px-4 py-2 rounded-xl hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30">Home</a>
+            <a href="categories.html" class="relative text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition-all duration-300 px-4 py-2 rounded-xl hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30">Categories</a>
+            <a href="about.html" class="relative text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition-all duration-300 px-4 py-2 rounded-xl hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30">About</a>
+            <a href="contact.html" class="relative text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition-all duration-300 px-4 py-2 rounded-xl hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30">Contact</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="flex items-center space-x-4">
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-3 rounded-2xl bg-white/10 dark:bg-slate-800/50 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 hover:bg-white/20 dark:hover:bg-slate-800/50 transition-all duration-300 hover:scale-110">
+              <svg class="w-6 h-6 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 md:hidden hidden">
+        <div class="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl transform transition-all duration-500 ease-out border-l border-slate-300 translate-x-full">
+          <div class="flex items-center justify-between p-4 border-b border-slate-300 bg-slate-50">
+            <span class="text-lg font-semibold text-slate-800">Menu</span>
+            <button id="mobile-menu-close" class="p-2 rounded-lg hover:bg-slate-200 transition-colors duration-200">
+              <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <nav class="p-4 space-y-2 bg-white">
+            <a href="index.html" class="block py-3 px-4 text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all duration-200 font-medium">Home</a>
+            <a href="categories.html" class="block py-3 px-4 text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all duration-200 font-medium">Categories</a>
+            <a href="about.html" class="block py-3 px-4 text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all duration-200 font-medium">About</a>
+            <a href="contact.html" class="block py-3 px-4 text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all duration-200 font-medium">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- 404 Content -->
+    <main class="flex-grow flex items-center justify-center py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-2xl mx-auto fade-in">
+          <!-- 404 Illustration -->
+          <div class="mb-8">
+            <div class="relative">
+              <!-- Large 404 Text -->
+              <div class="text-9xl md:text-[12rem] font-bold text-primary-100 dark:text-primary-900 select-none">404</div>
+
+              <!-- Floating Books Animation -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="relative">
+                  <!-- Book 1 -->
+                  <div class="absolute -top-8 -left-8 w-12 h-16 bg-gradient-to-br from-primary-400 to-primary-600 rounded-sm shadow-lg transform rotate-12 animate-bounce-light">
+                    <div class="w-full h-2 bg-primary-300 rounded-sm mt-1"></div>
+                  </div>
+
+                  <!-- Book 2 -->
+                  <div class="absolute -top-4 right-4 w-10 h-14 bg-gradient-to-br from-secondary-400 to-secondary-600 rounded-sm shadow-lg transform -rotate-6 animate-bounce-light" style="animation-delay: 0.5s">
+                    <div class="w-full h-1.5 bg-secondary-300 rounded-sm mt-1"></div>
+                  </div>
+
+                  <!-- Book 3 -->
+                  <div class="absolute top-8 -left-6 w-11 h-15 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-sm shadow-lg transform rotate-6 animate-bounce-light" style="animation-delay: 1s">
+                    <div class="w-full h-1.5 bg-yellow-300 rounded-sm mt-1"></div>
+                  </div>
+
+                  <!-- Center Icon -->
+                  <div class="w-16 h-16 bg-white dark:bg-gray-800 rounded-full shadow-xl flex items-center justify-center">
+                    <svg class="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.29-1.007-5.824-2.632M15 6.306a7.963 7.963 0 00-3-.306c-1.39 0-2.706.35-3.824 1.032M12 3v18" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Error Message -->
+          <div class="mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Page Not Found</h1>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-2">Oops! The page you're looking for seems to have wandered off into the digital library.</p>
+            <p class="text-gray-500 dark:text-gray-500">Don't worry, even the best readers sometimes lose their place.</p>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="index.html" class="btn-primary text-lg px-8 py-3 inline-flex items-center space-x-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+              <span>Back to Home</span>
+            </a>
+
+            <a href="categories.html" class="btn-outline text-lg px-8 py-3 inline-flex items-center space-x-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+              <span>Browse Categories</span>
+            </a>
+          </div>
+
+          <!-- Search Suggestion -->
+          <div class="mt-12 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Looking for something specific?</h3>
+            <div class="relative max-w-md mx-auto">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <input type="text" id="error-search" class="search-input pl-10 pr-4 py-3 text-center" placeholder="Search for eBooks..." />
+            </div>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-3">Try searching for topics like "programming", "business", or "design"</p>
+          </div>
+
+          <!-- Popular Links -->
+          <div class="mt-8">
+            <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-4">Popular Pages</h4>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="index.html" class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 text-sm font-medium transition-colors duration-200"> Featured eBooks </a>
+              <span class="text-gray-300 dark:text-gray-600">•</span>
+              <a href="about.html" class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 text-sm font-medium transition-colors duration-200"> About Us </a>
+              <span class="text-gray-300 dark:text-gray-600">•</span>
+              <a href="contact.html" class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 text-sm font-medium transition-colors duration-200"> Contact Support </a>
+              <span class="text-gray-300 dark:text-gray-600">•</span>
+              <a href="help.html" class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 text-sm font-medium transition-colors duration-200"> Help Center </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <!-- Logo -->
+          <div class="flex items-center space-x-2 mb-4 md:mb-0">
+            <div class="w-6 h-6 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <span class="text-lg font-bold">eBookStore</span>
+          </div>
+
+          <!-- Copyright -->
+          <div class="text-center">
+            <p class="text-gray-400 text-sm">&copy; 2023 eBookStore. All rights reserved.</p>
+          </div>
+
+          <!-- Social Links -->
+          <div class="flex space-x-4 mt-4 md:mt-0">
+            <a href="#" class="footer-link">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            <a href="#" class="footer-link">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"
+                />
+              </svg>
+            </a>
+            <a href="#" class="footer-link">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
